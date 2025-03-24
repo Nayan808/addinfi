@@ -165,36 +165,32 @@
                         </div>
                     </div>
                 </div>
-                <form id="contactForm" action="send_mail.php" method="POST">
-                    <h2>Get In Touch</h2>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <select id="serviceSelect" required>
-                                <option value="">Select Service</option>
-                                <option value="seo">SEO Optimization</option>
-                                <option value="social">Social Media</option>
-                                <option value="email">Email Marketing</option>
-                                <option value="ppc">PPC Advertising</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group" id="otherServiceGroup" style="display: none;">
-                            <input type="text" id="otherService" placeholder="Please specify your service need">
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Your Message" required></textarea>
-                        </div>
-                        <input type="hidden" name="_captcha" value="false">
-
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
-                </div>
+                <form action="send_mail.php" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="service" id="serviceSelect" required>
+                            <option value="">Select Service</option>
+                            <option value="seo">SEO Optimization</option>
+                            <option value="social">Social Media</option>
+                            <option value="email">Email Marketing</option>
+                            <option value="ppc">PPC Advertising</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="otherServiceGroup" style="display: none;">
+                        <input type="text" name="other_service" id="otherService" placeholder="Please specify your service need">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                
             </div>
         </div>
     </div>
