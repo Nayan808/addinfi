@@ -9,6 +9,9 @@ require 'src/SMTP.php';
 $mail = new PHPMailer(true);
 
 try {
+    $mail->SMTPDebug = 2;
+$mail->Debugoutput = 'html';
+
     $mail->isSMTP();
     $mail->Host       = 'smtp.addinfi.online'; // 🔹 Change if using another email provider
     $mail->SMTPAuth   = true;
