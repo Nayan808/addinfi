@@ -246,20 +246,21 @@
     </footer>
 
     <script src="js/main.js">
-
-        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+<script>
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
     e.preventDefault();
 
     const form = new FormData(this);
     const data = Object.fromEntries(form.entries());
 
-    const response = await fetch('https://script.google.com/macros/s/AKfycbzux66tKrqetAByW-rVOHjuMxIfVYpjLFbKDAiDQV47ykO865RvmSEGJ67LGunhCsyG/exec', {
+    const response = await fetch('https://script.google.com/macros/s/AKfycbwdsO8IF5rtviEqf-1lRJpqvUDCnohqv5FkCC-cNsb5c4zh8Nso60SxYuk8deewCqu1wA/exec', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: { 'Content-Type': 'application/json' }
     });
 
     const result = await response.json();
+    
     if (result.status === "success") {
         alert("Form submitted successfully!");
         this.reset();
