@@ -253,7 +253,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
     const form = new FormData(this);
     const data = Object.fromEntries(form.entries());
 
-    const response = await fetch('https://script.google.com/macros/s/AKfycbwdsO8IF5rtviEqf-1lRJpqvUDCnohqv5FkCC-cNsb5c4zh8Nso60SxYuk8deewCqu1wA/exec', {
+    const response = await fetch('https://script.google.com/macros/s/AKfycbysEIfquvZDtEMD-td8iSYs1kO7SAXspga5uN5hxnwTKu_oiNnJZFYpyrufon0C54hkWw/exec', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: { 'Content-Type': 'application/json' }
